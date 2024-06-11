@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0rc1 (Python 3.9.1 on darwin)" generated="20240604 10:57:08.067" rpa="false">
+<suite id="s1" name="HAPPY PATH" source="/Users/francismiguelramos/automation/python/Talibon/TEST/HAPPY_PATH.robot">
+<test id="s1-t1" name="Verify Functionality of Start New Transaction">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240604 10:57:08.406" level="INFO">Opening browser 'gc' to base url 'https://talibon-citizen-stg.multisyscorp.io/ovrs'.</msg>
+<status status="PASS" starttime="20240604 10:57:08.406" endtime="20240604 10:57:14.992"/>
+</kw>
+<kw name="Login Start" library="KEYWORD_HAPPY_PATH">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Login']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240604 10:57:14.994" endtime="20240604 10:57:15.311"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[1]/div/nav/ul/li[3]/div/button[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240604 10:57:15.311" level="INFO">Clicking element 'xpath=/html/body/div[2]/main/div[1]/div/nav/ul/li[3]/div/button[2]'.</msg>
+<status status="PASS" starttime="20240604 10:57:15.311" endtime="20240604 10:57:15.425"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='+63']</arg>
+<arg>9974090810</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240604 10:57:15.427" level="INFO">Typing text '9974090810' into text field 'xpath=//input[@placeholder='+63']'.</msg>
+<status status="PASS" starttime="20240604 10:57:15.426" endtime="20240604 10:57:15.897"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='______']</arg>
+<arg>222222</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240604 10:57:15.897" level="INFO">Typing text '222222' into text field 'xpath=//input[@placeholder='______']'.</msg>
+<status status="PASS" starttime="20240604 10:57:15.897" endtime="20240604 10:57:16.040"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240604 10:57:16.040" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20240604 10:57:16.040" endtime="20240604 10:57:16.184"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Successfully Logged In</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240604 10:57:16.184" endtime="20240604 10:57:18.868"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240604 10:57:23.871" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240604 10:57:18.868" endtime="20240604 10:57:23.871"/>
+</kw>
+<status status="PASS" starttime="20240604 10:57:14.993" endtime="20240604 10:57:23.871"/>
+</kw>
+<kw name="Start" library="KEYWORD_HAPPY_PATH">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Start New Transaction']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240604 10:57:23.873" level="INFO">Clicking element 'xpath=//button[normalize-space()='Start New Transaction']'.</msg>
+<status status="PASS" starttime="20240604 10:57:23.873" endtime="20240604 10:57:23.980"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Select Transaction</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240604 10:57:23.981" endtime="20240604 10:57:24.026"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//div[@class='mb-1 font-medium text-primary-base']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240604 10:57:24.026" endtime="20240604 10:57:24.061"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='/ovrs/inquiry']//div[@class='flex items-center space-x-2 rounded p-4 shadow-md']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240604 10:57:24.062" level="INFO">Clicking element 'xpath=//a[@href='/ovrs/inquiry']//div[@class='flex items-center space-x-2 rounded p-4 shadow-md']'.</msg>
+<status status="PASS" starttime="20240604 10:57:24.062" endtime="20240604 10:57:24.165"/>
+</kw>
+<status status="PASS" starttime="20240604 10:57:23.872" endtime="20240604 10:57:24.165"/>
+</kw>
+<kw name="Input OVR" library="KEYWORD_HAPPY_PATH">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@title='Official Violation Receipt (OVR) Number']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240604 10:57:24.168" endtime="20240604 10:57:24.633"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@title='Official Violation Receipt (OVR) Number']</arg>
+<arg>KL-1234567</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240604 10:57:24.634" level="INFO">Typing text 'KL-1234567' into text field 'xpath=//input[@title='Official Violation Receipt (OVR) Number']'.</msg>
+<status status="PASS" starttime="20240604 10:57:24.633" endtime="20240604 10:57:24.775"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Next']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240604 10:57:24.776" level="INFO">Clicking element 'xpath=//button[normalize-space()='Next']'.</msg>
+<status status="PASS" starttime="20240604 10:57:24.776" endtime="20240604 10:57:24.836"/>
+</kw>
+<status status="PASS" starttime="20240604 10:57:24.166" endtime="20240604 10:57:24.836"/>
+</kw>
+<kw name="Review" library="KEYWORD_HAPPY_PATH">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Review Violations</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20240604 10:57:30.143" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240604 10:57:30.147" level="FAIL">Text 'Review Violations' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20240604 10:57:24.837" endtime="20240604 10:57:30.147"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Proceed to Payment']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240604 10:57:30.147" endtime="20240604 10:57:30.147"/>
+</kw>
+<status status="FAIL" starttime="20240604 10:57:24.836" endtime="20240604 10:57:30.147"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240604 10:57:30.147" endtime="20240604 10:57:30.147"/>
+</kw>
+<status status="FAIL" starttime="20240604 10:57:08.405" endtime="20240604 10:57:30.148">Text 'Review Violations' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240604 10:57:08.068" endtime="20240604 10:57:30.149"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="HAPPY PATH">HAPPY PATH</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
